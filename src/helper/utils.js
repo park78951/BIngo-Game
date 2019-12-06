@@ -34,7 +34,7 @@ export const getCompleteRow = bingoNumbers => {
         line: row + 1
       });
     }
-
+    
     return completeLine;
   }, []);
 
@@ -85,5 +85,6 @@ export const findNewCompleteLine = (newLines, prevLines) => {
       return equal(prevLine, newLine)
     });
   });
+
   return newCompleteLine;
 };

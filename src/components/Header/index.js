@@ -7,7 +7,8 @@ import {
   START_BUTTON, 
   RESTART_BUTTON, 
   PLAYER1, 
-  PLAYER2 
+  PLAYER2,
+  BEFORE_START
 } from '../../conatants';
 import Style from './styles';
 
@@ -32,7 +33,7 @@ const Header = () => {
         <Button onClick={ gameStarter }>
           { isPlaying ? RESTART_BUTTON : START_BUTTON  }
         </Button>
-        <p>현재 Turn: { isPlaying ? turn : '시작 전' }</p>
+        <p>현재 Turn: { isPlaying ? turn : BEFORE_START }</p>
       </div>
       <CompleteNotifier completeLines={ completeLines[PLAYER2] } />
     </Style.HeaderWrapper>
