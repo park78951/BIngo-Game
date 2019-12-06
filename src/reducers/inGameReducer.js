@@ -1,7 +1,7 @@
 import { START_GAME } from '../actions/type';
-import { inGameState } from './initState';
+import { inGameStatus } from './initState';
 
-const inGameReducer = (state = inGameState, action) => {
+const inGameReducer = (state = inGameStatus, action) => {
   const { type, payload } = action;
 
   switch(type) {

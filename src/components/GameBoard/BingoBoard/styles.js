@@ -7,6 +7,9 @@ const BingoBoardWrapper = styled.div`
   align-items: center;
   width: 30rem;
   height: 30rem;
+
+  background-color: ${({ selected }) => selected && '#000'};
+  color: ${({ selected }) => selected && '#ffffff'}
 `;
 
 export default { BingoBoardWrapper };

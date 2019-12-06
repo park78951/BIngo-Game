@@ -1,9 +1,9 @@
 import React from 'react';
 import Style from './styles';
 
-const BingoCell = ({ children }) => {
+const BingoCell = ({ children, selected }) => {
   return (
-    <Style.BingoCellWrapper>
+    <Style.BingoCellWrapper selected={ selected }>
       { children }
     </Style.BingoCellWrapper>
   );
