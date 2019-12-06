@@ -2,13 +2,14 @@
   "name": "javascript-web-todo",
   "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "https://github.com/park78951/javascript-web-todo.git",
+  "repository": "https://github.com/park78951/Bingo-Game.git",
   "scripts": {
     "dev": "webpack-dev-server --hot",
-    "build": "webpac --mode production",
+    "build": "webpack --mode production",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
+  "homepage": "https://park78951/github.io/Bingo-Game",
   "author": "Sangkyu <park78951@gmail.com>",
   "license": "MIT",
   "dependencies": {
