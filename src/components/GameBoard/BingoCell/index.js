@@ -1,10 +1,10 @@
 import React from 'react';
 import Style from './styles';
 
-const BingoCell = () => {
+const BingoCell = ({ children }) => {
   return (
     <Style.BingoCellWrapper>
-      
+      { children }
     </Style.BingoCellWrapper>
   );
 };

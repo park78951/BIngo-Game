@@ -1,19 +1,11 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-`;
+import styled from 'styled-components';
 
 
 const GameContainerWrapper = styled.div`
-  background-color: blue;
-  width: 100vw;
-  height: 100vh;
+  background-color: lightblue;
+  width: 90vw;
+  height: 90vh;
+  margin: 2rem auto;
 `;
 
-export default { GlobalStyle, GameContainerWrapper };
+export default { GameContainerWrapper };

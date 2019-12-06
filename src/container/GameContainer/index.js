@@ -1,13 +1,14 @@
 import React from 'react';
+import Header from '../../components/Header';
+import GameBoard from '../../components/GameBoard'
 import Style from './styles';
 
 const GameContainer = () => {
   return (
-    <Style.GlobalStyle>
-      <Style.GameContainerWrapper>
-        
-      </Style.GameContainerWrapper>
-    </Style.GlobalStyle>
+    <Style.GameContainerWrapper>
+      <Header />
+      <GameBoard />
+    </Style.GameContainerWrapper>
   );
 };
 
