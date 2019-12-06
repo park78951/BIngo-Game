@@ -4,7 +4,7 @@ const CompleteNotifierWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: 35%;
   height: 100%;
 
   & > span {

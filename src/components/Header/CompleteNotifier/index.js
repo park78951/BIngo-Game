@@ -3,9 +3,9 @@ import Style from './styles';
 
 const CompleteNotifier = ({ completeLines }) => {
   const completeInfo = useMemo(() => {
-    return completeLines.map(({ type, line } ) => {
+    return completeLines.map(({ type, line }) => {
       return(
-        <p key={ Date.now() * line }>
+        <p key={ Date.now() + line + type }>
           { type }의 { line }번 째줄
         </p>
       );

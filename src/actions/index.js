@@ -7,9 +7,9 @@ import {
 } from './type';
 import {
   PLAYER1,
-  PLAYER2
+  PLAYER2,
 } from '../conatants';
-import { getCompleteLines } from '../helper';
+import { getCompleteLines, getFinishingMessage } from '../helper';
 
 export const startGame = () => ({
   type: START_GAME
@@ -32,14 +32,24 @@ export const selectNumber = payload => (dispatch, getState) => {
 
   const { boardNumbers } = getState();
 
-  const completeLinesPlayerOne = getCompleteLines(boardNumbers[PLAYER1]);
-  const completeLinesPlayerTwo = getCompleteLines(boardNumbers[PLAYER2]);
+  const completeLinesPlayer1 = getCompleteLines(boardNumbers[PLAYER1]);
+  const completeLinesPlayer2 = getCompleteLines(boardNumbers[PLAYER2]);
 
   dispatch({
     type: UPDATE_COMPLETE_LINE,
     payload: {
-      [PLAYER1]: completeLinesPlayerOne,
-      [PLAYER2]: completeLinesPlayerTwo
+      [PLAYER1]: completeLinesPlayer1,
+      [PLAYER2]: completeLinesPlayer2
     }
+  });
+
+  const finishingMessage = getFinishingMessage({
+    completeLinesPlayer1,
+    completeLinesPlayer2
+  });
+
+  finishingMessage && dispatch({ 
+    type: SHOW_MODAL, 
+    payload: finishingMessage 
   });
 };

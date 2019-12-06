@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 
 const GameContainerWrapper = styled.div`
-  background-color: lightblue;
+  position: relative;
   width: 90vw;
   height: 90vh;
   margin: 2rem auto;
-  position: relative;
 `;
 
 export default { GameContainerWrapper };

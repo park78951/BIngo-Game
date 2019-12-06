@@ -5,14 +5,13 @@ const HeaderWrapper = styled.div`
   height: 11rem;
   justify-content: space-between;
   align-items: flex-end;
-  background-color: green;
 
   .header__notification {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 25%;
 
     & > p {
       font-size: 1.5rem;

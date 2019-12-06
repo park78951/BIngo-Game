@@ -17,7 +17,7 @@ const BingoCell = ({ selected, number, player }) => {
     if(selected) return;
 
     dispatch(selectNumber(number));
-  }, [selected])
+  }, [selected, number, turn])
 
   return (
     <Style.BingoCellWrapper 
