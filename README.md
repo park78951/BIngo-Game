@@ -1,5 +1,4 @@
 # Bingo Game
----
 
 ## Installation
 
