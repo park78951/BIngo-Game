@@ -9,7 +9,6 @@ import { PLAYER1, PLAYER2 } from '../conatants';
 import { 
   getCompleteLines, 
   getFinishingMessage, 
-  findNewCompleteLine 
 } from '../helper';
 
 export const startGame = () => ({

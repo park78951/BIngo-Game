@@ -1,5 +1,3 @@
-import { BINGO_LINE } from '../conatants';
-
 const markSelected = (bingoNumbers, payload) => {
   const newBingoNumbers = bingoNumbers.map(row => {
     return row.map(numObj => {
