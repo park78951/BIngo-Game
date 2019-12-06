@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --hot",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "predeploy": "yarn run build"
   },
   "homepage": "https://park78951/github.io/Bingo-Game",
   "author": "Sangkyu <park78951@gmail.com>",
