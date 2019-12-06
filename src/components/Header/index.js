@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import CompleteLines from './CompleteLines';
 import Button from '.././CustomButton';
-import { START_BUTTON, RESTART_BUTTON } from '../../helper/conatants/interfaceTitle';
+import { useSelector, useDispatch } from 'react-redux';
+import { startGame } from '../../actions';
+import { START_BUTTON, RESTART_BUTTON } from '../../conatants';
 import Style from './styles';
 
 
 const Header = () => {
+  const isPlaying = useSelector(({ inGame }) => inGame.isPlaying);
+  const dispatch = useDispatch();
+
+  const gameStarter = useCallback(() => {
+    dispatch(startGame());
+  }, [isPlaying])
+
   return (
     <Style.HeaderWrapper>
       <CompleteLines />
-      <Button>
-        { START_BUTTON }
+      <Button onClick={ gameStarter }>
+        { isPlaying ? RESTART_BUTTON : START_BUTTON  }
       </Button>
       <CompleteLines />
     </Style.HeaderWrapper>

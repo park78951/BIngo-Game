@@ -5,10 +5,11 @@ const BingoCellWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6rem;
-  height: 6rem;
+  width: 5.5rem;
+  height: 5.5rem;
   font-size: 2rem;
   border: 1px solid #000;
+  border-radius: 1rem;
 `;
 
 export default { BingoCellWrapper }

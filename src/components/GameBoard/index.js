@@ -1,6 +1,6 @@
 import React from 'react';
 import BingoBoard from './BingoBoard';
-import { PLAYER1, PLAYER2 } from '../../helper/conatants/dataType';
+import { PLAYER1, PLAYER2 } from '../../conatants';
 import Style from './styles';
 
 const GameBoard = () => {

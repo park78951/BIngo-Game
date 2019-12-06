@@ -7,7 +7,7 @@ const mockData = new Array(25).fill().map((_, idx) => idx + 1);
 const BingoBoard = () => {
   const bignoCells = useMemo(() => mockData.map(num => {
     return (
-      <BingoCell>
+      <BingoCell key={ num }>
         { num }
       </BingoCell>
     );
