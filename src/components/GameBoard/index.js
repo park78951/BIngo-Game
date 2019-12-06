@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import BingoBoard from './BingoBoard';
 import { useSelector } from 'react-redux';
+import { generateKey } from '../../helper/utils';
 import Style from './styles';
 
 const GameBoard = () => {
@@ -10,7 +11,7 @@ const GameBoard = () => {
     return Object.keys(bingoNumbers).map(player => {
       return (
         <BingoBoard 
-          key={ player }
+          key={ generateKey(player) }
           numbers={ bingoNumbers[player] } 
           player={ player }
         />

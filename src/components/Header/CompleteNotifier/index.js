@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { generateKey } from '../../../helper/utils';
 import Style from './styles';
 
 const CompleteNotifier = ({ completeLines }) => {
@@ -7,7 +8,7 @@ const CompleteNotifier = ({ completeLines }) => {
       const { type, line } = completeLine;
 
       return(
-        <p key={ Date.now() + line + idx }>
+        <p key={ generateKey(idx) }>
           { type }의 { line }번 째줄
         </p>
       );

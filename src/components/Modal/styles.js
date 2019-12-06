@@ -5,7 +5,7 @@ const ModalWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 20rem;
+  width: 30rem;
   height: 10rem;
   background-color: #ffffff;
   border: 2px solid #000;

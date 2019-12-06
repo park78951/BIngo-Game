@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import BingoCell from '../BingoCell';
+import { generateKey } from '../../../helper/utils';
 import Style from './styles';
 
 const BingoBoard = ({ numbers, player }) => {
@@ -10,7 +11,7 @@ const BingoBoard = ({ numbers, player }) => {
         
         return (
           <BingoCell 
-            key={ Date.now() * number }
+            key={ generateKey(number) }
             selected={ selected }
             number={ number }
             player={ player }

@@ -88,3 +88,7 @@ export const findNewCompleteLine = (newLines, prevLines) => {
 
   return newCompleteLine;
 };
+
+export const generateKey = (pre) => {
+  return `${ pre }_${ new Date().getTime() }`;
+}
