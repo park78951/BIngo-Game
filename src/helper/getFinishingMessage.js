@@ -8,7 +8,7 @@ import {
 const getFinishingMessage = (bothCompleteLines) => {
   const { completeLinesPlayer1, completeLinesPlayer2 } = bothCompleteLines;
   let FinishingMessage = null;
-
+  
   const isPlayer1Bingo = completeLinesPlayer1.length === 5;
   const isPlayer2Bingo = completeLinesPlayer2.length === 5;
   

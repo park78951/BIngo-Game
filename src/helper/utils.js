@@ -1,3 +1,4 @@
+import equal from 'deep-equal';
 import { ROW, DIAGONAL, COLUMN, BINGO_LINE } from '../conatants';
 
 export const createOnBoardNumbers = (bingoNumbers) => {
@@ -76,4 +77,13 @@ const getCompleteLine = (countStorage, direction) => {
     .filter(completeForm => completeForm);
 
   return completeBingoLine;
+};
+
+export const findNewCompleteLine = (newLines, prevLines) => {
+  const newCompleteLine = newLines.filter(newLine => {
+    return !prevLines.some(prevLine => {
+      return equal(prevLine, newLine)
+    });
+  });
+  return newCompleteLine;
 };

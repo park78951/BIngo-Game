@@ -1,26 +1,28 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import BingoBoard from './BingoBoard';
 import { useSelector } from 'react-redux';
-import { PLAYER1, PLAYER2 } from '../../conatants';
 import Style from './styles';
 
 const GameBoard = () => {
-  const boardNumbers = useSelector(({ boardNumbers }) => boardNumbers);
+  const bingoNumbers = useSelector(({ boardNumbers }) => boardNumbers);
+
+  const bingoBoards = useMemo(() => {
+    return Object.keys(bingoNumbers).map(player => {
+      return (
+        <BingoBoard 
+          key={ player }
+          numbers={ bingoNumbers[player] } 
+          player={ player }
+        />
+      );
+    });
+  }, [bingoNumbers])
 
   return (
     <Style.GameBoardWrapper>
-      <BingoBoard 
-        key={ PLAYER1 }
-        numbers={ boardNumbers[PLAYER1] } 
-        player={ PLAYER1 }
-      />
-      <BingoBoard 
-        key={ PLAYER2 } 
-        numbers={ boardNumbers[PLAYER2] }
-        player={ PLAYER2 }
-      />
+      { bingoBoards }
     </Style.GameBoardWrapper>
   );
 };
 
-export default GameBoard;
+export default React.memo(GameBoard);

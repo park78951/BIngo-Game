@@ -10,6 +10,7 @@ const CompleteNotifierWrapper = styled.div`
   & > span {
     display: inline-block;
     font-weight: bold;
+    font-size: 1.3rem;
   }
 
   & > div {

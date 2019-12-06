@@ -18,6 +18,7 @@ const Header = () => {
     turn: state.inGame.turn,
     completeLines: state.completeLines
   }));
+  
   const dispatch = useDispatch();
 
   const gameStarter = useCallback(() => {
@@ -38,4 +39,4 @@ const Header = () => {
   );
 };
 
-export default React.memo(Header);
+export default Header;

@@ -3,9 +3,11 @@ import Style from './styles';
 
 const CompleteNotifier = ({ completeLines }) => {
   const completeInfo = useMemo(() => {
-    return completeLines.map(({ type, line }) => {
+    return completeLines.map((completeLine, idx) => {
+      const { type, line } = completeLine;
+
       return(
-        <p key={ Date.now() + line + type }>
+        <p key={ Date.now() + line + idx }>
           { type }의 { line }번 째줄
         </p>
       );
@@ -22,4 +24,4 @@ const CompleteNotifier = ({ completeLines }) => {
   );
 };
 
-export default React.memo(CompleteNotifier);
+export default CompleteNotifier;

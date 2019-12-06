@@ -20,4 +20,4 @@ const GameContainer = () => {
   );
 };
 
-export default GameContainer;
+export default React.memo(GameContainer);

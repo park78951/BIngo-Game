@@ -3,19 +3,20 @@ import BingoCell from '../BingoCell';
 import Style from './styles';
 
 const BingoBoard = ({ numbers, player }) => {
-  const bignoCells = useMemo(() => numbers.flat()
-    .map(numObj => {
-      const { number, selected } = numObj;
-      
-      return (
-        <BingoCell 
-          key={ Date.now() * number }
-          selected={ selected }
-          number={ number }
-          player={ player }
-        />
-      );
-  }));
+  const bignoCells = useMemo(() => {
+    return numbers.flat()
+      .map(numObj => {
+        const { number, selected } = numObj;
+        
+        return (
+          <BingoCell 
+            key={ Date.now() * number }
+            selected={ selected }
+            number={ number }
+            player={ player }
+          />
+        );
+  })}, [numbers]);
 
   return (
     <Style.BingoBoardWrapper>
@@ -24,4 +25,4 @@ const BingoBoard = ({ numbers, player }) => {
   );
 };
 
-export default React.memo(BingoBoard);
+export default BingoBoard;

@@ -7,7 +7,8 @@ const ModalWrapper = styled.div`
   align-items: center;
   width: 20rem;
   height: 10rem;
-  background-color: red;
+  background-color: #ffffff;
+  border: 2px solid #000;
   border-radius: 1rem;
 
   & > p {

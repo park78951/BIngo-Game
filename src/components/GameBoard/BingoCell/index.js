@@ -14,6 +14,7 @@ const BingoCell = ({ selected, number, player }) => {
       dispatch(showModal(WRONG_TURN_MESSAGE));
       return;
     }
+
     if(selected) return;
 
     dispatch(selectNumber(number));
