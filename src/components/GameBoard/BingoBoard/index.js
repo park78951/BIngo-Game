@@ -4,16 +4,15 @@ import Style from './styles';
 
 const BingoBoard = ({ numbers }) => {
   const bignoCells = useMemo(() => numbers.flat()
-    .map((numObj) => {
+    .map((numObj, index) => {
       const { number, selected } = numObj;
       
       return (
         <BingoCell 
           key={ Date.now() * number }
           selected={ selected }
-        >
-          { number }
-        </BingoCell>
+          number={ number }
+        />
       );
   }));
 

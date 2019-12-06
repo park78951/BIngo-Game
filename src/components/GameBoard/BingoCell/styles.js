@@ -10,6 +10,9 @@ const BingoCellWrapper = styled.div`
   font-size: 2rem;
   border: 1px solid #000;
   border-radius: 1rem;
+
+  background-color: ${({ selected }) => selected && '#000'};
+  color: ${({ selected }) => selected && '#ffffff'};
 `;
 
 export default { BingoCellWrapper }
