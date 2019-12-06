@@ -9,3 +9,8 @@ export const boardNumbers = {
   [PLAYER1]: [],
   [PLAYER2]: []
 };
+
+export const completeLines = {
+  [PLAYER1]: [],
+  [PLAYER2]: []
+}

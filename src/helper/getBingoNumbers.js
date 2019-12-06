@@ -1,4 +1,4 @@
-import { shuffle, createOnBoardNumbers } from './uitls';
+import { shuffle, createOnBoardNumbers } from './utils';
 import { BINGO_LINE } from '../conatants';
 
 const getBingoNumbers = () => {
