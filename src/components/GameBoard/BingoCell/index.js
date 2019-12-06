@@ -1,14 +1,17 @@
 import React, { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectNumber } from '../../../actions';
 import Style from './styles';
 
-const BingoCell = ({ selected, number }) => {
+const BingoCell = ({ selected, number, player }) => {
+  const turn = useSelector(({ inGame }) => inGame.turn);
   const dispatch = useDispatch();
+
   const cellClicker = useCallback(() => {
+    if(player !== turn ) return alert('임시!');
     if(selected) return;
 
-    dispatch(selectNumber(number))
+    dispatch(selectNumber(number));
   }, [selected])
 
   return (

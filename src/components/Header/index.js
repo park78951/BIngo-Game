@@ -8,7 +8,10 @@ import Style from './styles';
 
 
 const Header = () => {
-  const isPlaying = useSelector(({ inGame }) => inGame.isPlaying);
+  const { isPlaying, turn } = useSelector(({ inGame }) => ({
+    isPlaying: inGame.isPlaying,
+    turn: inGame.turn
+  }));
   const dispatch = useDispatch();
 
   const gameStarter = useCallback(() => {
@@ -18,12 +21,15 @@ const Header = () => {
   return (
     <Style.HeaderWrapper>
       <CompleteLines />
-      <Button onClick={ gameStarter }>
-        { isPlaying ? RESTART_BUTTON : START_BUTTON  }
-      </Button>
+      <div className='header__notification'>
+        <Button onClick={ gameStarter }>
+          { isPlaying ? RESTART_BUTTON : START_BUTTON  }
+        </Button>
+        <p>현재 Turn: { isPlaying ? turn : '시작 전' }</p>
+      </div>
       <CompleteLines />
     </Style.HeaderWrapper>
   );
 };
 
-export default Header;
+export default React.memo(Header);

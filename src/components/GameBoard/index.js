@@ -12,10 +12,12 @@ const GameBoard = () => {
       <BingoBoard 
         key={ PLAYER1 }
         numbers={ boardNumbers[PLAYER1] } 
+        player={ PLAYER1 }
       />
       <BingoBoard 
         key={ PLAYER2 } 
         numbers={ boardNumbers[PLAYER2] }
+        player={ PLAYER2 }
       />
     </Style.GameBoardWrapper>
   );

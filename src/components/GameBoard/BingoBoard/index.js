@@ -2,9 +2,9 @@ import React, { useMemo } from 'react';
 import BingoCell from '../BingoCell';
 import Style from './styles';
 
-const BingoBoard = ({ numbers }) => {
+const BingoBoard = ({ numbers, player }) => {
   const bignoCells = useMemo(() => numbers.flat()
-    .map((numObj, index) => {
+    .map(numObj => {
       const { number, selected } = numObj;
       
       return (
@@ -12,6 +12,7 @@ const BingoBoard = ({ numbers }) => {
           key={ Date.now() * number }
           selected={ selected }
           number={ number }
+          player={ player }
         />
       );
   }));

@@ -8,4 +8,4 @@ export const inGameStatus = {
 export const boardNumbers = {
   [PLAYER1]: [],
   [PLAYER2]: []
-}
+};
