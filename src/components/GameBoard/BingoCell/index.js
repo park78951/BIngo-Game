@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectNumber } from '../../../actions';
+import { selectNumber, showModal } from '../../../actions';
+import { WRONG_TURN_MESSAGE } from '../../../conatants';
 import Style from './styles';
 
 const BingoCell = ({ selected, number, player }) => {
@@ -8,7 +9,11 @@ const BingoCell = ({ selected, number, player }) => {
   const dispatch = useDispatch();
 
   const cellClicker = useCallback(() => {
-    if(player !== turn ) return alert('임시!');
+    if(player !== turn ) {
+      
+      dispatch(showModal(WRONG_TURN_MESSAGE));
+      return;
+    }
     if(selected) return;
 
     dispatch(selectNumber(number));

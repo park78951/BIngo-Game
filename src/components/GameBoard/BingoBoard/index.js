@@ -24,4 +24,4 @@ const BingoBoard = ({ numbers, player }) => {
   );
 };
 
-export default BingoBoard;
+export default React.memo(BingoBoard);

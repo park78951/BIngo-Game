@@ -19,12 +19,13 @@ const CompleteNotifierWrapper = styled.div`
     flex-direction: column-reverse;
     align-items: center;
     justify-content: flex-start;
+
+    & > p {
+        margin: 0;
+        font-size: 1.3rem;
+      }
   }
 
-  p {
-    margin: 0;
-    font-size: 1.3rem;
-  }
 `;
 
 export default { CompleteNotifierWrapper };

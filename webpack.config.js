@@ -22,6 +22,7 @@ module.exports = {
       'react-dom': '@hot-loader/react-dom'  
     }
   },
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebPackPlugin({
       template: 'public/index.html'

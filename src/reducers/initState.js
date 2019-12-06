@@ -13,4 +13,9 @@ export const boardNumbers = {
 export const completeLines = {
   [PLAYER1]: [],
   [PLAYER2]: []
-}
+};
+
+export const modalStatus = {
+  isModalOpen: false,
+  message: null
+};

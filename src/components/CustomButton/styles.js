@@ -8,6 +8,7 @@ const CustomButtonWrapper = styled.button`
   background-color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
+  outline: none;
 `;
 
 export default { CustomButtonWrapper }

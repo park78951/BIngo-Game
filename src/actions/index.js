@@ -1,7 +1,9 @@
 import {
   START_GAME,
   SELECT_NUMBER,
-  UPDATE_COMPLETE_LINE
+  UPDATE_COMPLETE_LINE,
+  SHOW_MODAL,
+  CLOSE_MODAL
 } from './type';
 import {
   PLAYER1,
@@ -11,6 +13,15 @@ import { getCompleteLines } from '../helper';
 
 export const startGame = () => ({
   type: START_GAME
+});
+
+export const showModal = payload => ({
+  type: SHOW_MODAL,
+  payload
+});
+
+export const closeModal = () => ({
+  type: CLOSE_MODAL
 });
 
 export const selectNumber = payload => (dispatch, getState) => {
